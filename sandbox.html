@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <body>
+        <script src="pizzaQuiz.js"></script>
+        <script>
+        userResponse = []
+
+        function answerLogger() {
+        var paraStuff = "Pizza" + userResponse.length
+        var response1 = document.getElementById(paraStuff).selectedOptions[0].innerHTML;
+        userResponse.push(response1);
+        console.log(userResponse);
+}
+        </script>
+            <table>
+             <tr>
+                <td id="questionTest">
+            <select name="newSkill" id="Pizza0">
+                <option value="1">A skill</option>
+                <option value="2">Another skill</option>
+                <option value="3">Yet another skill</option>
+            </select>
+             <button onclick="answerLogger(),document.getElementById('questionTest').style.display='none';">
+                 click me
+            </button>
+            </td>
+            <td id="question1Cell">
+                <h2>Question 1: What is our most popular Pizza?</h2>
+                <br>
+                <select name="Question1Menu" id="Pizza1">
+                    <option value="cheese">Cheese Pizza</option>
+                    <option value="pepperoni">Pepperoni Pizza</option>
+                    <option value="hawaiian">Hawaiian Pizza</option>
+                  </select>
+                <br> <br> 
+                <button onclick="answerLogger(),
+                document.getElementById('question1Cell').style.display='none';">
+                    Submit your answer 1
+                </button>        
+            </td>
+            </tr>   
+            </table>
+            
+            
+            
+           
+        </body>
+    </head>
+</html>
